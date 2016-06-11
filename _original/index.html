@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Sander Moolin</title>
+    <!--<link rel="stylesheet" href="app.css" type="text/css" />-->
+    <script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
+    <script>
+        function init() {
+            var canvas = document.getElementById("content");
+            var context = canvas.getContext("2D");
+            window.addEventListener("resize", resizeCanvas, false);
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                draw();
+            }
+
+            resizeCanvas();
+
+            function draw() {
+                var stage = new createjs.Stage("content");
+                stage.addChild(new createjs.Shape()).setTransform(stage.canvas.width / 2, stage.canvas.height / 2).graphics.f("gray").dc(0, 0, 50);
+                stage.update();
+            }
+        }
+    </script>
+</head>
+<body onload="init();">
+    <canvas id="content">
+        Your browser doesn't support HTML5 Canvas. Upgrade to a newer browser, like <a href="https://www.google.com/chrome/browser/">Chrome</a>.
+    </canvas>
+</body>
+</html>

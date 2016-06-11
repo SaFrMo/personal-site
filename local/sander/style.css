@@ -1,0 +1,45 @@
+/*
+Theme Name: Sander
+Theme URI: http://wordpress.org/themes/twentythirteen
+Author: Sander Moolin
+Author URI: http://sandermoolin.com
+Description: Sander's theme
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: twentythirteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+	position: absolute;
+}
+.container {
+	position: absolute;
+}
+
+/* Utilities */
+.full-window {
+	min-width: 100vw;
+	min-height: 100vh;
+}
+.full-size {
+	min-width: 100%;
+	min-height: 100%;
+}
+
+/* Front page */
+.canvas-container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 300px;
+}
