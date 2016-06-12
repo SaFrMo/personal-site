@@ -9,5 +9,5 @@
         <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
         <?php wp_head(); ?>
     </head>
-    <body class="full-window">
+    <body <?php body_class('full-window'); ?>>
         <div class="container full-size">
