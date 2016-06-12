@@ -2,15 +2,18 @@
 
 	<div class="headline">
 		Sander<br />Moolin
-		<span class="menu-trigger"></span>
+		<div class="menu-trigger">
+			<span class="line"></span>
+			<span class="line"></span>
+		</div>
 	</div>
 
 	<?php 
-		/*$args = array(
+		$args = array(
 			'menu'			=> 'main-menu',	
 			'container_class'	=> 'main-menu'
 		);
-		wp_nav_menu($args);*/
+		wp_nav_menu($args);
 	?>
 
 	<div class="canvas-container">

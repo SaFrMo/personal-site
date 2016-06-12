@@ -4,6 +4,7 @@ sander2016 = {
 	
 	init : function() {
 		sander2016.initGeometry();
+		sander2016.initMenuTrigger();
 	},
 	
 	onResize : function() {
@@ -47,6 +48,12 @@ sander2016 = {
 		h = (h > 600 ? 600 : h);
 		sander2016.frontPageRenderer.setSize( h, h );
 		jQuery('.canvas-container').css('height', h + 'px');
+	},
+	
+	initMenuTrigger : function() {
+		jQuery('.menu-trigger').on('click', function() {
+			jQuery('body').toggleClass('menu-open');
+		});
 	}
 	
 	

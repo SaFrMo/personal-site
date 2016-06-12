@@ -69,13 +69,18 @@ a {
 	font-family: 'Bevan';
 }
 .home .main-menu {
+	display: none;
     position: absolute;
-    top: 80%;
+    top: 298px;
     left: 150px;
     text-align: right;
-    bottom: 0;
+    padding: 0;
+    border-top: 5px solid #000000;
+    width: 0;
+}
+.menu-open.home .main-menu {
+	width: auto;
     padding: 0 150px 0 50px;
-    font-size: 30px;
     border-top: 5px solid #000000;
 }
 .home .main-menu li {
@@ -86,12 +91,39 @@ a {
     bottom: 30px;
     height: 20px;
     width: 20px;
+	cursor: pointer;
+}
+.home .menu-trigger .line {
+    height: 10px;
     background-color: #ff0000;
-    border-radius: 100%;
-	animation: pulse 3s infinite;
+    width: 20px;
+    position: absolute;
+    border-radius: 10px 10px 0 0;
+	animation: pulse 4s infinite;
+}
+.home .menu-trigger .line:last-child {
+	top: 10px;
+	border-radius: 0 0 10px 10px;
+}
+/* Menu trigger open */
+.menu-open.home .menu-trigger .line {
+	transform: rotate(-45deg);
+    border-radius: 0;
+	width: 23px;
+    animation: none;
+    opacity: 1;
+}
+.menu-open.home .menu-trigger .line:last-child {
+	transform: rotate(45deg);
 }
 @keyframes pulse {
 	0% { opacity: 1 }
 	50% { opacity: 0 }
 	100% { opacity: 1 }
+}
+
+/* Animations */
+.menu-trigger .line,
+.main-menu {
+	transition: 0.3s;
 }
